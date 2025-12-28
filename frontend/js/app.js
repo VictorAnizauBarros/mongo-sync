@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/users/insert", {
+      const response = await fetch("http://localhost:2000/users/insert", {
         mode: "cors",
         method: "POST",
         headers: {
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (response.ok) {
         showMessage(
-          `Usuário inserido com sucesso! ID: ${result.insertId}`,
+          `Usuário inserido com sucesso! ID: ${result.insertedId}`,
           "success"
         );
         form.reset();
